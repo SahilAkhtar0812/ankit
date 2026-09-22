@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Hazi Salman Menon | Learn Trading Simply
+    </title>
+
+    <meta
+        name="description"
+        content="Join Hazi Salman Menon's free Telegram learning community and learn Entry, Target and Stop-Loss through simple chart examples."
+    >
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f8fbff 0%,
+                    #eef5ff 100%
+                );
+
+            color: #122033;
+
+            font-family:
+                "Manrope",
+                Arial,
+                sans-serif;
+
+            padding:
+                20px
+                14px
+                40px;
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .container {
+
+            width: min(
+                100%,
+                560px
+            );
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           LANGUAGE NOTE
+        ===================================================== */
+
+        .language-note {
+
+            display: inline-block;
+
+            background: #ffffff;
+
+            border:
+                1px solid
+                #dfe7f1;
+
+            border-radius: 999px;
+
+            padding:
+                8px
+                15px;
+
+            margin-bottom: 18px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            color: #42556d;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    20,
+                    50,
+                    90,
+                    0.06
+                );
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .top-bar {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            background: #ffffff;
+
+            border:
+                1px solid
+                #dfe7f1;
+
+            border-radius: 999px;
+
+            padding:
+                8px
+                14px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #42556d;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    20,
+                    50,
+                    90,
+                    0.06
+                );
+        }
+
+
+        .online-dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #21b573;
+
+            display: inline-block;
+        }
+
+
+        /* =====================================================
+           PROFILE IMAGE
+        ===================================================== */
+
+        .avatar {
+
+            width: 105px;
+
+            height: 105px;
+
+            margin:
+                22px auto
+                8px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border:
+                5px solid
+                #ffffff;
+
+            box-shadow:
+                0 10px 28px
+                rgba(
+                    25,
+                    60,
+                    100,
+                    0.16
+                );
+        }
+
+
+        .avatar img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           VERIFIED
+        ===================================================== */
+
+        .verified {
+
+            margin:
+                -4px auto
+                10px;
+
+            width: 24px;
+
+            height: 24px;
+
+            border-radius: 50%;
+
+            background: #1976d2;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            border:
+                3px solid
+                #eef5ff;
+        }
+
+
+        /* =====================================================
+           NAME
+        ===================================================== */
+
+        .name {
+
+            font-size: 29px;
+
+            line-height: 1.2;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           TAGLINE
+        ===================================================== */
+
+        .tagline {
+
+            margin-top: 8px;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #53657b;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           RATING
+        ===================================================== */
+
+        .rating {
+
+            margin:
+                14px
+                0
+                18px;
+        }
+
+
+        .rating b {
+
+            color: #f3ad1d;
+
+            letter-spacing: 2px;
+
+            font-size: 16px;
+        }
+
+
+        .rating small {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color: #6c7b8f;
+
+            font-weight: 700;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .btn,
+        .btn-dark {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: 100%;
+
+            min-height: 55px;
+
+            border-radius: 14px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition:
+                0.2s ease;
+
+            line-height: 1.6;
+
+            padding:
+                8px
+                14px;
+        }
+
+
+        .btn {
+
+            background: #229ed9;
+
+            color: #ffffff;
+
+            box-shadow:
+                0 10px 24px
+                rgba(
+                    34,
+                    158,
+                    217,
+                    0.25
+                );
+        }
+
+
+        .btn-dark {
+
+            background: #152536;
+
+            color: #ffffff;
+
+            box-shadow:
+                0 10px 24px
+                rgba(
+                    21,
+                    37,
+                    54,
+                    0.18
+                );
+        }
+
+
+        .btn:hover,
+        .btn-dark:hover {
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           TELEGRAM ICON
+        ===================================================== */
+
+        .telegram-icon {
+
+            width: 22px;
+
+            height: 22px;
+
+            display: inline-flex;
+
+            flex-shrink: 0;
+        }
+
+
+        .telegram-icon svg {
+
+            width: 100%;
+
+            height: 100%;
+
+            fill: currentColor;
+        }
+
+
+        /* =====================================================
+           FREE TEXT
+        ===================================================== */
+
+        .free-text {
+
+            font-size: 12px;
+
+            color: #718095;
+
+            font-weight: 700;
+
+            margin:
+                10px
+                0
+                22px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 8px;
+
+            margin-bottom: 26px;
+        }
+
+
+        .stat {
+
+            background: #ffffff;
+
+            border:
+                1px solid
+                #e0e8f2;
+
+            border-radius: 14px;
+
+            padding:
+                14px
+                6px;
+
+            box-shadow:
+                0 6px 18px
+                rgba(
+                    20,
+                    50,
+                    90,
+                    0.05
+                );
+        }
+
+
+        .stat-num {
+
+            font-size: 17px;
+
+            font-weight: 800;
+        }
+
+
+        .stat-lbl {
+
+            font-size: 11px;
+
+            color: #718095;
+
+            margin-top: 3px;
+
+            font-weight: 700;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PITCH
+        ===================================================== */
+
+        .pitch {
+
+            font-size: 22px;
+
+            font-weight: 700;
+
+            line-height: 1.7;
+        }
+
+
+        .pitch .highlight {
+
+            color: #1976d2;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           SUB TEXT
+        ===================================================== */
+
+        .sub {
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: #617086;
+
+            margin:
+                10px
+                0
+                17px;
+        }
+
+
+        /* =====================================================
+           URGENCY
+        ===================================================== */
+
+        .urgency {
+
+            background: #fff5df;
+
+            border:
+                1px solid
+                #f4d28b;
+
+            color: #825b11;
+
+            border-radius: 12px;
+
+            padding: 12px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FEATURES
+        ===================================================== */
+
+        .features {
+
+            display: grid;
+
+            gap: 10px;
+
+            margin:
+                22px
+                0;
+
+            text-align: left;
+        }
+
+
+        .feat {
+
+            display: flex;
+
+            gap: 12px;
+
+            background: #ffffff;
+
+            border:
+                1px solid
+                #e1e8f0;
+
+            border-radius: 15px;
+
+            padding: 15px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    20,
+                    50,
+                    90,
+                    0.045
+                );
+        }
+
+
+        .feat-icon {
+
+            font-size: 23px;
+
+            line-height: 1;
+
+            flex-shrink: 0;
+        }
+
+
+        .feat-text {
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            line-height: 1.6;
+        }
+
+
+        .feat-text small {
+
+            display: block;
+
+            color: #718095;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            line-height: 1.7;
+
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           TRUST
+        ===================================================== */
+
+        .trust {
+
+            font-size: 12px;
+
+            color: #66768b;
+
+            margin:
+                18px
+                0
+                14px;
+
+            line-height: 1.8;
+        }
+
+
+        .trust b {
+
+            color: #263c55;
+
+            margin:
+                0
+                4px;
+        }
+
+
+        /* =====================================================
+           FREE TAG
+        ===================================================== */
+
+        .free-tag {
+
+            margin:
+                9px
+                0
+                24px;
+
+            color: #278a5b;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+        ===================================================== */
+
+        .disc {
+
+            font-size: 10.5px;
+
+            color: #7b8797;
+
+            line-height: 1.8;
+
+            margin-top: 20px;
+        }
+
+
+        .disc strong {
+
+            color: #5d6a7b;
+        }
+
+
+        .agency {
+
+            margin-top: 8px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FLOATING BUTTON
+        ===================================================== */
+
+        .float {
+
+            position: fixed;
+
+            right: 18px;
+
+            bottom: 18px;
+
+            width: 54px;
+
+            height: 54px;
+
+            border-radius: 50%;
+
+            background: #229ed9;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    34,
+                    158,
+                    217,
+                    0.35
+                );
+
+            z-index: 10;
+        }
+
+
+        .float svg {
+
+            width: 25px;
+
+            height: 25px;
+
+            fill: currentColor;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 430px) {
+
+            body {
+
+                padding:
+                    14px
+                    12px
+                    35px;
+            }
+
+
+            .name {
+
+                font-size: 25px;
+            }
+
+
+            .pitch {
+
+                font-size: 19px;
+            }
+
+
+            .btn,
+            .btn-dark {
+
+                font-size: 13px;
+
+                min-height: 56px;
+            }
+
+
+            .stats {
+
+                gap: 6px;
+            }
+
+
+            .stat {
+
+                padding:
+                    12px
+                    4px;
+            }
+
+
+            .feat {
+
+                padding: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =====================================================
+         LANGUAGE FORMAT
+    ====================================================== -->
+
+    <div class="language-note">
+
+        English + اردو
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        <span class="online-dot"></span>
+
+        Free Telegram Learning Community
+        <span>
+            (مفت ٹیلیگرام تعلیمی کمیونٹی)
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROFILE
+    ====================================================== -->
+
+    <div class="avatar">
+
+        <img
+            src="hazisalman.jpeg"
+            alt="Hazi Salman Menon"
+        >
+
+    </div>
+
+
+    <div class="verified">
+        ✓
+    </div>
+
+
+    <h1 class="name">
+
+        Hazi Salman Menon
+
+    </h1>
+
+
+    <p class="tagline">
+
+        📊 Learn Trading Simply
+        (آسان طریقے سے ٹریڈنگ سیکھیں)
+
+    </p>
+
+
+   
+
+    <div class="rating">
+
+        <b>
+            ★★★★★
+        </b>
+
+        <small>
+
+            Beginner-Friendly Learning
+            (ابتدائی افراد کے لیے آسان سیکھنے کا طریقہ)
+
+        </small>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP TELEGRAM BUTTON
+    ====================================================== -->
+
+    <a
+        class="btn top-button join-link"
+        href="https://t.me/+BmCHkHqtiI04NWU9"
+    >
+
+        <span class="telegram-icon">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+                />
+
+            </svg>
+
+        </span>
+
+
+        Join Free Telegram Channel
+        (مفت ٹیلیگرام چینل میں شامل ہوں)
+        →
+
+    </a>
+
+
+    <p class="free-text">
+
+        100% Free · No Registration · Beginner Friendly
+        <br>
+        (100% مفت · رجسٹریشن کی ضرورت نہیں · ابتدائی افراد کے لیے آسان)
+
+    </p>
+
+
+    <!-- =====================================================
+         STATS
+    ====================================================== -->
+
+    <div class="stats">
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+
+                3 Point
+
+            </div>
+
+            <div class="stat-lbl">
+
+                Method
+                (طریقہ)
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+
+                FREE
+
+            </div>
+
+            <div class="stat-lbl">
+
+                Community
+                (کمیونٹی)
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+
+                Simple
+
+            </div>
+
+            <div class="stat-lbl">
+
+                Learning
+                (سیکھنا)
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN PITCH
+    ====================================================== -->
+
+    <p class="pitch">
+
+        Learn
+        (سیکھیں)
+
+        <span class="highlight">
+
+            Entry, Target & Stop-Loss
+            (انٹری، ٹارگٹ اور اسٹاپ لاس)
+
+        </span>
+
+        with Hazi Salman Menon.
+        (حاجی سلمان مینن کے ساتھ۔)
+
+    </p>
+
+
+    <p class="sub">
+
+        Learn through simple chart examples and follow a clear,
+        repeatable framework designed to help beginners understand
+        charts and basic risk management.
+
+        <br><br>
+
+        (آسان چارٹ مثالوں کے ذریعے سیکھیں اور ایک واضح اور بار بار
+        استعمال کیے جانے والے طریقہ کار کو سمجھیں، جو ابتدائی افراد
+        کو چارٹس اور بنیادی رسک مینجمنٹ سیکھنے میں مدد دے۔)
+
+    </p>
+
+
+    <!-- =====================================================
+         URGENCY
+    ====================================================== -->
+
+    <div class="urgency">
+
+        🔥 Start Learning With Our Free Telegram Community
+        <br>
+
+        (🔥 ہماری مفت ٹیلیگرام کمیونٹی کے ساتھ سیکھنا شروع کریں)
+
+    </div>
+
+
+    <!-- =====================================================
+         SECOND TELEGRAM BUTTON
+    ====================================================== -->
+
+    <a
+        class="btn join-link"
+        href="https://t.me/+BmCHkHqtiI04NWU9"
+    >
+
+        <span class="telegram-icon">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+                />
+
+            </svg>
+
+        </span>
+
+
+        Join Hazi Salman Menon on Telegram
+        (حاجی سلمان مینن کے ٹیلیگرام میں شامل ہوں)
+        →
+
+    </a>
+
+
+    <!-- =====================================================
+         FEATURES
+    ====================================================== -->
+
+    <div class="features">
+
+
+        <!-- POINT 01 -->
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                📈
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 01 — Find Entry
+                <br>
+                (پوائنٹ 01 — انٹری تلاش کریں)
+
+                <small>
+
+                    Learn how to identify potential entry areas
+                    through simple chart examples.
+
+                    <br>
+
+                    (آسان چارٹ مثالوں کے ذریعے ممکنہ انٹری ایریاز
+                    کی شناخت کرنا سیکھیں۔)
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- POINT 02 -->
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🎯
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 02 — Set Target
+                <br>
+                (پوائنٹ 02 — ٹارگٹ مقرر کریں)
+
+                <small>
+
+                    Understand how traders identify target levels
+                    and plan exits.
+
+                    <br>
+
+                    (سمجھیں کہ ٹریڈرز ٹارگٹ لیولز کیسے شناخت کرتے
+                    اور ایگزٹ کی منصوبہ بندی کیسے کرتے ہیں۔)
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- POINT 03 -->
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🛡️
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 03 — Control Risk
+                <br>
+                (پوائنٹ 03 — رسک کنٹرول کریں)
+
+                <small>
+
+                    Learn about stop-loss levels and basic
+                    capital protection principles.
+
+                    <br>
+
+                    (اسٹاپ لاس لیولز اور بنیادی سرمایہ تحفظ کے
+                    اصولوں کے بارے میں سیکھیں۔)
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- EDUCATION -->
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🎓
+            </div>
+
+
+            <div class="feat-text">
+
+                Educational Community
+                <br>
+                (تعلیمی کمیونٹی)
+
+                <small>
+
+                    Trading content explained in a simple,
+                    beginner-friendly format.
+
+                    <br>
+
+                    (ٹریڈنگ کا مواد آسان اور ابتدائی افراد کے لیے
+                    قابل فہم انداز میں سمجھایا جاتا ہے۔)
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TRUST
+    ====================================================== -->
+
+    <div class="trust">
+
+        ✅
+
+        <b>
+
+            Free Community
+            (مفت کمیونٹی)
+
+        </b>
+
+        •
+
+        Beginner Friendly
+        (ابتدائی افراد کے لیے آسان)
+
+        •
+
+        Educational
+        (تعلیمی)
+
+    </div>
+
+
+    <!-- =====================================================
+         DARK TELEGRAM BUTTON
+    ====================================================== -->
+
+    <a
+        class="btn-dark join-link"
+        href="https://t.me/+BmCHkHqtiI04NWU9"
+    >
+
+        Open Hazi Salman Menon Telegram Channel
+        <br>
+        (حاجی سلمان مینن کا ٹیلیگرام چینل کھولیں)
+        →
+
+    </a>
+
+
+    <p class="free-tag">
+
+        ✓ Free to Join
+        (✓ مفت شامل ہوں)
+
+    </p>
+
+
+    <!-- =====================================================
+         DISCLAIMER
+    ====================================================== -->
+
+    <div class="disc">
+
+        <strong>
+
+            Disclaimer:
+            (اہم وضاحت:)
+
+        </strong>
+
+
+        <br>
+
+
+        This website and Telegram community are for educational
+        and informational purposes only. Nothing shown here should
+        be considered investment, trading or financial advice.
+        Trading and investing involve financial risk.
+
+
+        <br><br>
+
+
+        (یہ ویب سائٹ اور ٹیلیگرام کمیونٹی صرف تعلیمی اور معلوماتی
+        مقاصد کے لیے ہیں۔ یہاں موجود کسی بھی مواد کو سرمایہ کاری،
+        ٹریڈنگ یا مالی مشورہ نہیں سمجھا جانا چاہیے۔ ٹریڈنگ اور
+        سرمایہ کاری میں مالی خطرہ شامل ہوتا ہے۔)
+
+
+        <div class="agency">
+
+            Advertised by SRS Marketing Agency
+            <br>
+            (SRS Marketing Agency کی جانب سے تشہیر شدہ)
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     FLOATING TELEGRAM BUTTON
+====================================================== -->
+
+<a
+    class="float join-link"
+    href="https://t.me/+BmCHkHqtiI04NWU9"
+    aria-label="Join Hazi Salman Menon Telegram"
+>
+
+    <svg viewBox="0 0 24 24">
+
+        <path
+            d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+        />
+
+    </svg>
+
+</a>
+
+
+<script>
+
+(() => {
+
+    'use strict';
+
+
+    /* ========================================================
+       CONFIGURATION
+    ======================================================== */
+
+    const CONFIG = Object.freeze({
+
+        pixelId:
+            '1651641809867404',
+
+        telegramUrl:
+            'https://t.me/+BmCHkHqtiI04NWU9',
+
+        pageViewDelayMs:
+            3000,
+
+        passiveReaderDelayMs:
+            8000,
+
+        minimumClickTimeMs:
+            1000,
+
+        trackedRedirectDelayMs:
+            700,
+
+        fastRedirectDelayMs:
+            50,
+
+        pageViewSessionKey:
+            'ca_nitin_murarka_qualified_page_view'
+
+    });
+
+
+    const pageOpenedAt =
+        Date.now();
+
+
+    let pageViewTracked =
+        false;
+
+
+    let subscribeTracked =
+        false;
+
+
+    let navigationStarted =
+        false;
+
+
+    let humanInteractionDetected =
+        false;
+
+
+
+    /* ========================================================
+       LOAD META PIXEL
+    ======================================================== */
+
+    function loadMetaPixel() {
+
+
+        const pixelGuardKey =
+            `__caNitinMurarkaPixelInitialized_${CONFIG.pixelId}`;
+
+
+        !function(
+            f,
+            b,
+            e,
+            v,
+            n,
+            t,
+            s
+        ) {
+
+
+            if(f.fbq)
+                return;
+
+
+            n =
+                f.fbq =
+                function() {
+
+                    n.callMethod
+
+                        ?
+
+                        n.callMethod.apply(
+                            n,
+                            arguments
+                        )
+
+                        :
+
+                        n.queue.push(
+                            arguments
+                        );
+
+                };
+
+
+            if(!f._fbq)
+                f._fbq =
+                    n;
+
+
+            n.push =
+                n;
+
+
+            n.loaded =
+                true;
+
+
+            n.version =
+                '2.0';
+
+
+            n.queue =
+                [];
+
+
+            t =
+                b.createElement(e);
+
+
+            t.async =
+                true;
+
+
+            t.src =
+                v;
+
+
+            s =
+                b.getElementsByTagName(e)[0];
+
+
+            s.parentNode.insertBefore(
+                t,
+                s
+            );
+
+
+        }(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
+
+
+        if(window[pixelGuardKey])
+            return;
+
+
+        let pixelAlreadyRegistered =
+            false;
+
+
+        try {
+
+
+            if(
+                typeof fbq.getState ===
+                'function'
+            ) {
+
+
+                const pixelState =
+                    fbq.getState();
+
+
+                pixelAlreadyRegistered =
+                    pixelState.pixels.some(
+                        pixel =>
+
+                            String(pixel.id) ===
+                            String(CONFIG.pixelId)
+                    );
+
+            }
+
+
+        }
+
+        catch(error) {
+
+
+            pixelAlreadyRegistered =
+                false;
+
+        }
+
+
+        if(!pixelAlreadyRegistered) {
+
+
+            fbq(
+                'init',
+                CONFIG.pixelId
+            );
+
+        }
+
+
+        window[pixelGuardKey] =
+            true;
+
+    }
+
+
+
+    /* ========================================================
+       SESSION PAGEVIEW
+    ======================================================== */
+
+    function sessionPageViewExists() {
+
+
+        try {
+
+
+            return (
+                sessionStorage.getItem(
+                    CONFIG.pageViewSessionKey
+                ) ===
+                'true'
+            );
+
+
+        }
+
+        catch(error) {
+
+
+            return false;
+
+        }
+
+    }
+
+
+
+    function saveSessionPageView() {
+
+
+        try {
+
+
+            sessionStorage.setItem(
+
+                CONFIG.pageViewSessionKey,
+
+                'true'
+
+            );
+
+
+        }
+
+        catch(error) {
+
+            // Ignore storage errors.
+
+        }
+
+    }
+
+
+
+    /* ========================================================
+       AUTOMATION CHECK
+    ======================================================== */
+
+    function automationDetected() {
+
+
+        return (
+            navigator.webdriver ===
+            true
+        );
+
+    }
+
+
+
+    /* ========================================================
+       QUALIFIED PAGEVIEW
+    ======================================================== */
+
+    function tryQualifiedPageView() {
+
+
+        const timeOnPageMs =
+            Date.now() -
+            pageOpenedAt;
+
+
+        const interactionQualified =
+
+            humanInteractionDetected &&
+
+            timeOnPageMs >=
+            CONFIG.pageViewDelayMs;
+
+
+        const passiveReaderQualified =
+
+            timeOnPageMs >=
+            CONFIG.passiveReaderDelayMs;
+
+
+        const canTrack =
+
+            !pageViewTracked &&
+
+            !sessionPageViewExists() &&
+
+            !automationDetected() &&
+
+            (
+                interactionQualified ||
+                passiveReaderQualified
+            ) &&
+
+            document.visibilityState ===
+            'visible' &&
+
+            document.hasFocus() &&
+
+            typeof window.fbq ===
+            'function';
+
+
+        if(!canTrack)
+            return;
+
+
+        fbq(
+
+            'track',
+
+            'PageView',
+
+            {
+
+                qualified_view:
+                    true,
+
+                human_interaction:
+                    humanInteractionDetected,
+
+                qualification:
+
+                    interactionQualified
+
+                        ?
+
+                        'interaction_3_seconds'
+
+                        :
+
+                        'focused_8_seconds',
+
+                time_on_page:
+
+                    Math.round(
+                        timeOnPageMs /
+                        1000
+                    )
+
+            }
+
+        );
+
+
+        pageViewTracked =
+            true;
+
+
+        saveSessionPageView();
+
+    }
+
+
+
+    /* ========================================================
+       HUMAN INTERACTION
+    ======================================================== */
+
+    function recordHumanInteraction(
+        event
+    ) {
+
+
+        if(
+            !event.isTrusted ||
+            humanInteractionDetected
+        ) {
+
+            return;
+
+        }
+
+
+        humanInteractionDetected =
+            true;
+
+
+        tryQualifiedPageView();
+
+    }
+
+
+
+    function initializeVisitorQualification() {
+
+
+        const interactionEvents = [
+
+            'pointerdown',
+
+            'touchstart',
+
+            'keydown',
+
+            'scroll',
+
+            'mousemove'
+
+        ];
+
+
+        interactionEvents.forEach(
+            eventName => {
+
+
+                window.addEventListener(
+
+                    eventName,
+
+                    recordHumanInteraction,
+
+                    {
+
+                        passive:
+                            true,
+
+                        once:
+                            true
+
+                    }
+
+                );
+
+            }
+        );
+
+
+        window.setTimeout(
+
+            tryQualifiedPageView,
+
+            CONFIG.pageViewDelayMs
+
+        );
+
+
+        window.setTimeout(
+
+            tryQualifiedPageView,
+
+            CONFIG.passiveReaderDelayMs
+
+        );
+
+    }
+
+
+
+    /* ========================================================
+       TELEGRAM CLICK + SUBSCRIBE EVENT
+    ======================================================== */
+
+    function handleTelegramClick(
+        event
+    ) {
+
+
+        event.preventDefault();
+
+
+        if(navigationStarted)
+            return;
+
+
+        navigationStarted =
+            true;
+
+
+        const timeOnPageMs =
+            Date.now() -
+            pageOpenedAt;
+
+
+        const isQualifiedClick =
+
+            event.isTrusted &&
+
+            !automationDetected() &&
+
+            timeOnPageMs >=
+            CONFIG.minimumClickTimeMs;
+
+
+        if(
+
+            isQualifiedClick &&
+
+            !subscribeTracked &&
+
+            typeof window.fbq ===
+            'function'
+
+        ) {
+
+
+            fbq(
+
+                'track',
+
+                'Subscribe',
+
+                {
+
+                    value:
+                        0,
+
+                    currency:
+                        'INR',
+
+                    destination:
+                        'Telegram',
+
+                    source:
+                        'Hazi Salman Menon Landing Page',
+
+                    time_on_page:
+
+                        Math.round(
+                            timeOnPageMs /
+                            1000
+                        )
+
+                }
+
+            );
+
+
+            subscribeTracked =
+                true;
+
+        }
+
+
+        const redirectDelay =
+
+            isQualifiedClick
+
+                ?
+
+                CONFIG.trackedRedirectDelayMs
+
+                :
+
+                CONFIG.fastRedirectDelayMs;
+
+
+        window.setTimeout(
+
+            () => {
+
+
+                window.location.assign(
+                    CONFIG.telegramUrl
+                );
+
+
+            },
+
+            redirectDelay
+
+        );
+
+    }
+
+
+
+    /* ========================================================
+       CONNECT TELEGRAM BUTTONS
+    ======================================================== */
+
+    function initializeTelegramButtons() {
+
+
+        const buttons =
+            document.querySelectorAll(
+                '.join-link'
+            );
+
+
+        buttons.forEach(
+            button => {
+
+
+                button.href =
+                    CONFIG.telegramUrl;
+
+
+                button.addEventListener(
+
+                    'click',
+
+                    handleTelegramClick
+
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================================
+       START
+    ======================================================== */
+
+    function start() {
+
+
+        loadMetaPixel();
+
+
+        initializeVisitorQualification();
+
+
+        initializeTelegramButtons();
+
+    }
+
+
+
+    if(
+        document.readyState ===
+        'loading'
+    ) {
+
+
+        document.addEventListener(
+
+            'DOMContentLoaded',
+
+            start,
+
+            {
+                once:
+                    true
+            }
+
+        );
+
+
+    }
+
+    else {
+
+
+        start();
+
+    }
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
